@@ -2,7 +2,7 @@ pipeline {
     agent {
         docker {
             image 'maven:3.6.1-jdk-8-alpine'
-            args '--mount source=maven-repository,target=/root/.m2'
+            args '--mount source=maven-repository,target=/var/lib/jenkins/.m2'
         }
     }
     stages {
