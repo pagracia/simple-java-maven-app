@@ -8,7 +8,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'pwd ; id ; mvn -B -DskipTests clean package'
+                sh 'pwd ; id ; echo $HOME ; ls -l $HOME/.m2 ; mvn -B -DskipTests clean package'
             }
         }
         stage('Test') {
